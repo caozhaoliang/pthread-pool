@@ -31,6 +31,6 @@ int pool_add_worker(void*(*process)(void* arg),void* arg);
 void* thread_routine(void* arg);
 static CThread_pool* pool=NULL;
 void pool_init(int max_thread_num);
-int pool_destroy(void);
+int pool_destory();
 
 #endif

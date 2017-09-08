@@ -84,24 +84,4 @@ int pool_destory() {
 	return 0;
 }
 
-void* mypro(void* arg) {
-	printf("process id is %d\n",getpid());
-	sleep(1);
-	return NULL;
-}
 
-int main()
-{
-	int i;
-	pool_init(5);
-	int *workingnum=(int*)malloc(sizeof(int)*10);
-	for(i=0;i<10;i++){
-		workingnum[i] = i;
-		pool_add_worker(mypro,&workingnum[i]);
-	}
-	sleep(3);
-	pool_destory();
-	free(workingnum);
-	return 0;
-
-}
