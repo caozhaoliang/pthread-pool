@@ -1,0 +1,2 @@
+#pthread_pool
+g++ main.cpp pthread_pool.c -lpthread -g -o file
